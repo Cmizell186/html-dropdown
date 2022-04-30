@@ -1,0 +1,56 @@
+/* for button */
+.dropdown-btn{
+    /* background-color changes well background color */
+    background-color: red;
+    /* color changes text color */
+    color: black;
+
+    /* padding changes the padding around the element */
+    /* refer to  https://developer.mozilla.org/en-US/docs/Web/CSS/padding */
+    padding: 32px;
+
+    /* changes font size of text */
+    font-size: 24px;
+
+    /* sets a border */
+    border: none;
+    /* border-radius makes things more circular! go ahead and mess with the number value */
+    border-radius: 5px;
+}
+
+
+/* mess with this to change positioning */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+/* content that shows when hovered */
+.content{
+    /* we set display to none so it initially doesnt show up */
+    /* refer to lines 50-55 to understand how it shows up! */
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    box-shadow: 0 0 8px black;
+    z-index: 1
+}
+
+/* this messes with text and some padding! */
+.content a {
+    color: black;
+    padding: 12px 16px;
+    /* gets rid of purple text when clicked! */
+    text-decoration: none;
+    display: block;
+}
+
+
+/* this is what allows it to show up! */
+.dropdown:hover .content{
+    /* notice how we changed it from display none to display block!
+    This allows it to show up now! Refer to
+    https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+    display: block;
+}
